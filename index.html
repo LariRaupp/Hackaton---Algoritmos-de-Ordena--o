@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hackaton – Quicksort & Heapsort</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Hackaton – Algoritmos de Ordenação</h1>
+      <p>Quicksort e Heapsort em JavaScript</p>
+    </header>
+
+    <!-- Abas / Tabs -->
+    <nav class="tabs">
+      <button class="tab-btn active" data-tab="quick">Quicksort</button>
+      <button class="tab-btn" data-tab="heap">Heapsort</button>
+    </nav>
+
+    <!-- Conteúdo da aba Quicksort -->
+    <section id="quick" class="tab-content active">
+      <h2>Quicksort</h2>
+
+      <!-- Formulário para inserir dados -->
+      <div class="card">
+        <h3>Adicionar Pessoa</h3>
+        <form id="formQuick" class="form-row">
+          <label>ID <input type="number" id="qId" required /></label>
+          <label>Nome <input type="text" id="qNome" required /></label>
+          <label>Idade <input type="number" id="qIdade" required /></label>
+          <button type="submit">Adicionar</button>
+          <button type="button" id="qExemplo">Carregar Exemplo</button>
+          <button type="button" id="qLimpar">Limpar Lista</button>
+        </form>
+      </div>
+
+      <!-- Menu de opções-->
+      <div class="card">
+        <h3>Menu de Ordenação</h3>
+        <div class="form-row">
+          <label>
+            Opção
+            <select id="qOpcao">
+              <option value="1">1 - Ordenar por ID</option>
+              <option value="2">2 - Ordenar por NOME</option>
+              <option value="3">3 - Ordenar por IDADE</option>
+            </select>
+          </label>
+
+          <label>
+            Ordenação
+            <select id="qOrdem">
+              <option value="c">Crescente</option>
+              <option value="d">Decrescente</option>
+            </select>
+          </label>
+
+          <button id="qOrdenar">Ordenar (Quicksort)</button>
+        </div>
+      </div>
+
+      <!-- Tabela de visualização -->
+      <div class="card">
+        <h3>Lista (Quicksort)</h3>
+        <table id="qTabela">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Idade</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Conteúdo da aba Heapsort -->
+    <section id="heap" class="tab-content">
+      <h2>Heapsort</h2>
+
+      <!-- Formulário para inserir dados -->
+      <div class="card">
+        <h3>Adicionar Pessoa</h3>
+        <form id="formHeap" class="form-row">
+          <label>ID <input type="number" id="hId" required /></label>
+          <label>Nome <input type="text" id="hNome" required /></label>
+          <label>Idade <input type="number" id="hIdade" required /></label>
+          <button type="submit">Adicionar</button>
+          <button type="button" id="hExemplo">Carregar Exemplo</button>
+          <button type="button" id="hLimpar">Limpar Lista</button>
+        </form>
+      </div>
+
+      <!-- Menu de opções -->
+      <div class="card">
+        <h3>Menu de Ordenação</h3>
+        <div class="form-row">
+          <label>
+            Opção
+            <select id="hOpcao">
+              <option value="1">1 - Ordenar por ID</option>
+              <option value="2">2 - Ordenar por NOME</option>
+              <option value="3">3 - Ordenar por IDADE</option>
+            </select>
+          </label>
+
+          <label>
+            Ordenação
+            <select id="hOrdem">
+              <option value="c">Crescente</option>
+              <option value="d">Decrescente</option>
+            </select>
+          </label>
+
+          <button id="hOrdenar">Ordenar (Heapsort)</button>
+        </div>
+      </div>
+
+      <!-- Tabela de visualização -->
+      <div class="card">
+        <h3>Lista (Heapsort)</h3>
+        <table id="hTabela">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Idade</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer>
+      <small> Larissa Raupp & Matheus Padilha </small>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
