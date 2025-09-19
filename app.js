@@ -48,19 +48,22 @@ function atualizarTabela(idTabela, lista) {
 // QUICKSORT
 // -----------------------------
 function quicksort(arr, chave, crescente = true) {
-  if (!Array.isArray(arr)) return [];
+  if (!Array.isArray(arr)) return []; // garante que arr é um array
   if (arr.length <= 1) return structuredClone(arr);
 
-  const pivot = arr[arr.length - 1];
+  const pivot = arr[arr.length - 1]; // escolhe o último elemento como pivô
   const menores = [];
   const maiores = [];
 
+  // separa os elementos em menores e maiores em relação ao pivô
   for (let i = 0; i < arr.length - 1; i++) {
     const a = arr[i][chave];
     const b = pivot[chave];
     const vaiParaMenores = crescente ? a < b : a > b;
     (vaiParaMenores ? menores : maiores).push(arr[i]);
   }
+
+  // concatena: quicksort(menores), pivô, quicksort(maiores)
   return [
     ...quicksort(menores, chave, crescente),
     structuredClone(pivot),
